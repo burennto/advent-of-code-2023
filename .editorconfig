@@ -1,0 +1,13 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{rb,rake}]
+charset = utf-8
+
+[*.{rb,rake}]
+indent_style = space
+indent_size = 2

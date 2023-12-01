@@ -1,0 +1,59 @@
+require 'minitest/autorun'
+
+require_relative '../../lib/solution_base'
+
+class SolutionTest < Minitest::Test
+  def setup
+    @solution = <%= @module_name %>::Solution.new
+  end
+
+  def test_sample
+    # Redirect stdout to capture the output for testing
+    output = StringIO.new
+    $stdout = output
+
+    @solution.sample
+
+    # Reset stdout
+    $stdout = STDOUT
+
+    expected_output = "Loaded sample input:\n"
+    assert output.string.start_with?(expected_output)
+  end
+
+  def test_part_one
+    output = StringIO.new
+    $stdout = output
+
+    @solution.part_one
+
+    $stdout = STDOUT
+
+    expected_output = "Loaded actual input:\n"
+    assert output.string.start_with?(expected_output)
+  end
+
+  def test_part_two
+    skip 'Not implemented yet'
+  end
+end
+
+module <%= @module_name %>
+  class Solution < SolutionBase
+    def sample
+      puts 'Loaded sample input:'
+      puts sample_input
+      puts '---'
+    end
+
+    def part_one
+      puts 'Loaded actual input:'
+      puts actual_input
+      puts '---'
+    end
+
+    def part_two
+      raise NotImplementedError, 'Not implemented yet'
+    end
+  end
+end

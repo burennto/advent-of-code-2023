@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.20.0)
+    rake (13.1.0)
+
+PLATFORMS
+  arm64-darwin-23
+  x86_64-linux
+
+DEPENDENCIES
+  minitest
+  rake
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.10

@@ -1,0 +1,13 @@
+AllCops:
+  NewCops: disable
+  Exclude:
+    - Gemfile
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
